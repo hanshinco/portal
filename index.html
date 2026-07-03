@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ハンシン 業務アプリ ポータル</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#6366f1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  :root{
+    --ink:#1f2430; --muted:#6b7280; --line:#e6e8ee; --bg:#f5f6f8; --panel:#fff;
+    --accent:#6366f1; --accent2:#8b5cf6; --accent-strong:#4f46e5;
+  }
+  html,body{margin:0}
+  body{
+    font-family:'Inter','Noto Sans JP',system-ui,sans-serif; color:var(--ink);
+    background:var(--bg); min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:56px 20px 72px}
+  header{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+  .mk{width:44px; height:44px; border-radius:12px; display:grid; place-items:center;
+      background:linear-gradient(135deg,var(--accent),var(--accent2)); flex:0 0 auto}
+  .mk svg{width:26px; height:26px; display:block}
+  h1{font-size:22px; font-weight:800; margin:0; letter-spacing:.01em}
+  .sub{color:var(--muted); font-size:13px; margin:4px 0 0}
+  .grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:16px; margin-top:32px}
+  .card{
+    display:flex; flex-direction:column; gap:12px; text-decoration:none; color:inherit;
+    background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:20px;
+    transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+  }
+  .card:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(31,36,48,.10); border-color:#d6d9e2}
+  .card:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .crow{display:flex; align-items:center; gap:12px}
+  .ci{width:44px; height:44px; border-radius:11px; flex:0 0 auto; display:grid; place-items:center;
+      background:#eef0fb; color:var(--accent-strong)}
+  .ci svg{width:24px; height:24px; display:block}
+  .cname{font-weight:700; font-size:15.5px}
+  .cdesc{color:var(--muted); font-size:12.5px; line-height:1.6; flex:1}
+  .cfoot{display:flex; align-items:center; justify-content:space-between; margin-top:2px}
+  .tag{font-size:11px; font-weight:600; padding:3px 8px; border-radius:999px; color:var(--muted); background:#f0f1f5}
+  .tag.pages{color:var(--accent-strong); background:#eef0fb}
+  .go{font-size:12.5px; font-weight:600; color:var(--accent-strong); display:inline-flex; align-items:center; gap:4px}
+  .go svg{width:15px; height:15px}
+  footer{margin-top:40px; color:#9aa0ad; font-size:11.5px; text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="mk"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.7"/><rect x="13" y="4" width="7" height="7" rx="1.7"/><rect x="4" y="13" width="7" height="7" rx="1.7"/><rect x="13" y="13" width="7" height="7" rx="1.7"/></svg></span>
+    <div>
+      <h1>業務アプリ ポータル</h1>
+      <p class="sub">利用するアプリを選んでください。</p>
+    </div>
+  </header>
+
+  <main class="grid">
+    <!-- デモ機管理（GitHub Pages 移行済み） -->
+    <a class="card" href="https://hanshinco.github.io/demo_rental/">
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 20 7v10l-8 4-8-4V7l8-4Z"/><path d="M12 3v18M4 7l8 4 8-4"/></svg></span>
+        <span class="cname">デモ機管理</span>
+      </div>
+      <div class="cdesc">デモ機の貸出・返却・予約・在庫を一元管理。</div>
+      <div class="cfoot"><span class="tag pages">GitHub Pages版</span><span class="go">開く <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+
+    <!-- 出荷チェック（現行GAS） -->
+    <a class="card" href="https://script.google.com/a/macros/hanshinco.com/s/AKfycbwSkIji1MTU9u6CYDdTnucTuvSf4FEYuNSFj3lujNI8MXGnPQRNrHmzF7Op76Z69xtN/exec">
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h11v9H3zM14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17.5" cy="18" r="1.7"/></svg></span>
+        <span class="cname">出荷チェック</span>
+      </div>
+      <div class="cdesc">出荷内容の確認・チェック。</div>
+      <div class="cfoot"><span class="tag">現行GAS版</span><span class="go">開く <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+
+    <!-- ミズタ在庫管理（現行GAS） -->
+    <a class="card" href="https://script.google.com/a/macros/hanshinco.com/s/AKfycbwdJ632NfVdU7965MPqe1LAPEfz3mMZtB2T32Vw3GzWZifFaWSv7u1ouRkSVWIe618L/exec">
+      <div class="crow">
+        <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z"/><path d="M3 12l9 4.5L21 12M3 15.5 12 20l9-4.5"/></svg></span>
+        <span class="cname">ミズタ在庫管理</span>
+      </div>
+      <div class="cdesc">ミズタの在庫を管理。</div>
+      <div class="cfoot"><span class="tag">現行GAS版</span><span class="go">開く <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+    </a>
+  </main>
+
+  <footer>hanshinco 業務アプリ ポータル</footer>
+</div>
+</body>
+</html>
