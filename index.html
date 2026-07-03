@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>業務アプリポータル</title>
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#6366f1">
+<meta name="theme-color" content="#1f2430">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <style>
   *{box-sizing:border-box}
   :root{
     --ink:#1f2430; --muted:#6b7280; --line:#e6e8ee; --bg:#f5f6f8; --panel:#fff;
-    --accent:#6366f1; --accent2:#8b5cf6; --accent-strong:#4f46e5;
+    --accent:#3f4654; --accent2:#1f2430; --accent-strong:#1f2430;
   }
   html,body{margin:0}
   body{font-family:'Inter','Noto Sans JP',system-ui,sans-serif; color:var(--ink); background:var(--bg); min-height:100vh; -webkit-font-smoothing:antialiased}
@@ -43,13 +43,13 @@
   .card:hover{transform:translateY(-3px); box-shadow:0 12px 28px rgba(31,36,48,.10); border-color:#d6d9e2}
   .card:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
   .crow{display:flex; align-items:center; gap:12px}
-  .ci{width:44px; height:44px; border-radius:11px; flex:0 0 auto; display:grid; place-items:center; background:#eef0fb; color:var(--accent-strong)}
+  .ci{width:44px; height:44px; border-radius:11px; flex:0 0 auto; display:grid; place-items:center; background:#f1f2f4; color:var(--accent-strong)}
   .ci svg{width:24px; height:24px; display:block}
   .cname{font-weight:700; font-size:15.5px}
   .cdesc{color:var(--muted); font-size:12.5px; line-height:1.6; flex:1}
   .cfoot{display:flex; align-items:center; justify-content:space-between; margin-top:2px}
   .tag{font-size:11px; font-weight:600; padding:3px 8px; border-radius:999px; color:var(--muted); background:#f0f1f5}
-  .tag.pages{color:var(--accent-strong); background:#eef0fb}
+  .tag.pages{color:#fff; background:#1f2430}
   .go{font-size:12.5px; font-weight:600; color:var(--accent-strong); display:inline-flex; align-items:center; gap:4px}
   .go svg{width:15px; height:15px}
   .note{color:var(--muted); font-size:13px}
