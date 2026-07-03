@@ -29,12 +29,10 @@ function renderApps(apps) {
   if (!apps.length) { grid.innerHTML = '<p class="note">利用できるアプリがありません。</p>'; return; }
   grid.innerHTML = apps.map(a => {
     const icon = APP_ICONS[a.icon] || APP_ICONS.box;
-    const tagCls = a.tag === 'pages' ? 'tag pages' : 'tag';
-    const tagTxt = a.tag === 'pages' ? 'GitHub Pages版' : '現行GAS版';
     return `<a class="card" href="${esc(a.url)}">
       <div class="crow"><span class="ci">${icon}</span><span class="cname">${esc(a.name)}</span></div>
       <div class="cdesc">${esc(a.desc || '')}</div>
-      <div class="cfoot"><span class="${tagCls}">${tagTxt}</span><span class="go">開く ${ARROW}</span></div>
+      <div class="cfoot"><span class="go">開く ${ARROW}</span></div>
     </a>`;
   }).join('');
 }
