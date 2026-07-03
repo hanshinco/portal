@@ -1,0 +1,6 @@
+# GASバックエンド（非公開。GitHubには push しない）
+gas-api/
+
+# OS / エディタ
+.DS_Store
+Thumbs.db
