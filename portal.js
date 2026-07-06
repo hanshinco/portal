@@ -29,7 +29,7 @@ function renderApps(apps) {
   if (!apps.length) { grid.innerHTML = '<p class="note">利用できるアプリがありません。</p>'; return; }
   grid.innerHTML = apps.map(a => {
     const icon = APP_ICONS[a.icon] || APP_ICONS.box;
-    return `<a class="card" href="${esc(a.url)}">
+    return `<a class="card" href="${esc(a.url)}" target="_blank" rel="noopener">
       <div class="crow"><span class="ci">${icon}</span><span class="cname">${esc(a.name)}</span></div>
       <div class="cdesc">${esc(a.desc || '')}</div>
       <div class="cfoot"><span class="go">開く ${ARROW}</span></div>
